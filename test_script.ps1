@@ -104,12 +104,11 @@ Start-Sleep -s 20
 docker version
 docker version -f '{{.Server.Os}}'
 
-Start-ProcessWithOutput "docker pull busybox"
-#Start-ProcessWithOutput "docker run --rm -v 'C:\:/user-profile' busybox ls /user-profile"
+#Start-ProcessWithOutput "docker pull busybox"
+docker pull busybox --quiet
 docker run --rm -v 'C:\:/user-profile' busybox ls /user-profile
 
 Start-ProcessWithOutput "docker pull alpine"
-#Start-ProcessWithOutput "docker run --rm alpine echo hello_world"
 docker run --rm alpine echo hello_world
 
 Write-Host "Switching Docker to Windows mode..."
