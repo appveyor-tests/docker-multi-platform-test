@@ -1,7 +1,10 @@
 
 image: ws2022-azure
-    
+
+
 test_script:
+- ps: 'Write-Host "APPVEYOR_BUILD_WORKER_IMAGE: $env:APPVEYOR_BUILD_WORKER_IMAGE"'
+- ps: 'Write-Host "APPVEYOR_BUILD_WORKER_CLOUD: $env:APPVEYOR_BUILD_WORKER_CLOUD"'
 - ps: .\test_script.ps1
 
 build: off
