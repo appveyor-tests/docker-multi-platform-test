@@ -106,6 +106,7 @@ docker version -f '{{.Server.Os}}'
 
 docker pull busybox
 Start-ProcessWithOutput "docker run --rm -v 'C:\:/user-profile' busybox ls /user-profile"
+docker run --rm -v 'C:\:/user-profile' busybox ls /user-profile
 
 docker pull alpine
 Start-ProcessWithOutput "docker run --rm alpine echo hello_world"
